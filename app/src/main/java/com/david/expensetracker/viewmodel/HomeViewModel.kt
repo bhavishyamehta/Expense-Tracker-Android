@@ -57,18 +57,18 @@ class HomeViewModel(val dao: ExpenseDao) : ViewModel() {
     fun getItemIcon(item: ExpenseEntity): Int {
         return when (item.category) {
             "Paypal" -> {
-                R.drawable.ic_paypal
+                R.drawable.paypal
             }
 
             "Netflix" -> {
-                R.drawable.ic_netflix2
+                R.drawable.netflix
             }
 
             "Starbucks" -> {
-                R.drawable.ic_starbucks
+                R.drawable.spotify
             }
 
-            else -> R.drawable.ic_upwork
+            else -> R.drawable.youtube
         }
     }
 

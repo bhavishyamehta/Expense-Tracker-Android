@@ -1,0 +1,66 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:width="85dp"
+    android:height="81dp"
+    android:viewportWidth="85"
+    android:viewportHeight="81">
+  <group>
+    <clip-path
+        android:pathData="M24,12.4L48,12.4A12,12 0,0 1,60 24.4L60,48.4A12,12 0,0 1,48 60.4L24,60.4A12,12 0,0 1,12 48.4L12,24.4A12,12 0,0 1,24 12.4z"/>
+    <path
+        android:pathData="M24,12.4L48,12.4A12,12 0,0 1,60 24.4L60,48.4A12,12 0,0 1,48 60.4L24,60.4A12,12 0,0 1,12 48.4L12,24.4A12,12 0,0 1,24 12.4z"
+        android:fillAlpha="0.04">
+      <aapt:attr name="android:fillColor">
+        <gradient
+            android:startX="12"
+            android:startY="12.4"
+            android:endX="60"
+            android:endY="60.4"
+            android:type="linear">
+          <item android:offset="0" android:color="#FFF8FBFF"/>
+          <item android:offset="1" android:color="#00FFFFFF"/>
+        </gradient>
+      </aapt:attr>
+    </path>
+    <path
+        android:pathData="M36,36.4m-14,0a14,14 0,1 1,28 0a14,14 0,1 1,-28 0"
+        android:strokeAlpha="0.5"
+        android:fillColor="#1ED760"
+        android:fillAlpha="0.5"/>
+    <path
+        android:pathData="M42.364,42.023C42.125,42.403 41.615,42.509 41.216,42.281C38.075,40.459 34.136,40.049 29.48,41.051C29.034,41.143 28.587,40.884 28.492,40.459C28.396,40.034 28.667,39.609 29.114,39.518C34.2,38.41 38.569,38.881 42.077,40.93C42.476,41.158 42.604,41.643 42.364,42.023ZM43.991,38.562C43.688,39.032 43.05,39.169 42.556,38.896C38.968,36.786 33.499,36.178 29.257,37.408C28.699,37.56 28.125,37.271 27.965,36.755C27.806,36.224 28.109,35.677 28.667,35.526C33.514,34.129 39.542,34.797 43.672,37.211C44.134,37.484 44.294,38.091 43.991,38.562ZM44.134,34.949C39.829,32.52 32.733,32.292 28.619,33.476C27.965,33.674 27.264,33.324 27.056,32.687C26.849,32.064 27.232,31.396 27.886,31.199C32.606,29.833 40.451,30.106 45.394,32.899C45.984,33.233 46.175,33.962 45.825,34.524C45.49,35.1 44.724,35.298 44.134,34.949Z"
+        android:strokeAlpha="0.5"
+        android:fillColor="#ffffff"
+        android:fillAlpha="0.5"/>
+    <path
+        android:pathData="M36,36.4m-14,0a14,14 0,1 1,28 0a14,14 0,1 1,-28 0"
+        android:fillColor="#1ED760"/>
+    <path
+        android:pathData="M42.364,42.023C42.125,42.403 41.615,42.509 41.216,42.281C38.075,40.459 34.136,40.049 29.48,41.051C29.034,41.143 28.587,40.884 28.492,40.459C28.396,40.034 28.667,39.609 29.114,39.518C34.2,38.41 38.569,38.881 42.077,40.93C42.476,41.158 42.604,41.643 42.364,42.023ZM43.991,38.562C43.688,39.032 43.05,39.169 42.556,38.896C38.968,36.786 33.499,36.178 29.257,37.408C28.699,37.56 28.125,37.271 27.965,36.755C27.806,36.224 28.109,35.677 28.667,35.526C33.514,34.129 39.542,34.797 43.672,37.211C44.134,37.484 44.294,38.091 43.991,38.562ZM44.134,34.949C39.829,32.52 32.733,32.292 28.619,33.476C27.965,33.674 27.264,33.324 27.056,32.687C26.849,32.064 27.232,31.396 27.886,31.199C32.606,29.833 40.451,30.106 45.394,32.899C45.984,33.233 46.175,33.962 45.825,34.524C45.49,35.1 44.724,35.298 44.134,34.949Z"
+        android:fillColor="#ffffff"/>
+    <path
+        android:pathData="M25,59.9a11.5,6.5 0,1 0,23 0a11.5,6.5 0,1 0,-23 0z"
+        android:fillColor="#2BD969"/>
+  </group>
+  <path
+      android:pathData="M24,12.4L48,12.4A12,12 0,0 1,60 24.4L60,48.4A12,12 0,0 1,48 60.4L24,60.4A12,12 0,0 1,12 48.4L12,24.4A12,12 0,0 1,24 12.4z"
+      android:strokeAlpha="0.5"
+      android:strokeWidth="0.8"
+      android:fillColor="#00000000">
+    <aapt:attr name="android:strokeColor">
+      <gradient
+          android:startX="13"
+          android:startY="11.4"
+          android:endX="58.5"
+          android:endY="60.4"
+          android:type="linear">
+        <item android:offset="0" android:color="#0CD8D8D8"/>
+        <item android:offset="1" android:color="#66FFFFFF"/>
+      </gradient>
+    </aapt:attr>
+  </path>
+  <path
+      android:pathData="M29,29.4m-9,0a9,9 0,1 1,18 0a9,9 0,1 1,-18 0"
+      android:fillColor="#ffffff"
+      android:fillAlpha="0.18"/>
+</vector>

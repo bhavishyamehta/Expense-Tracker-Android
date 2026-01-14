@@ -47,11 +47,17 @@ import com.david.expensetracker.widget.ExpenseTextView
 fun HomeScreen(navController: NavController) {
     val viewModel: HomeViewModel =
         HomeViewModelFactory(LocalContext.current).create(HomeViewModel::class.java)
+
+    val state = viewModel.expenses.collectAsState(initial = emptyList())
+    val expenses = viewModel.getTotalExpense(state.value)
+    val income = viewModel.getTotalIncome(state.value)
+    val balance = viewModel.getBalance(state.value)
+
     Surface(modifier = Modifier.fillMaxSize()) {
         ConstraintLayout(modifier = Modifier.fillMaxSize()) {
             val (nameRow, list, card, topBar, add) = createRefs()
             Image(
-                painter = painterResource(id = R.drawable.ic_topbar), contentDescription = null,
+                painter = painterResource(R.drawable.ic_topbar), contentDescription = null,
                 modifier = Modifier.constrainAs(topBar) {
                     top.linkTo(parent.top)
                     start.linkTo(parent.start)
@@ -66,12 +72,15 @@ fun HomeScreen(navController: NavController) {
                         top.linkTo(parent.top)
                         start.linkTo(parent.start)
                         end.linkTo(parent.end)
-                    }) {
-                Column(modifier = Modifier.align(Alignment.CenterStart)) {
+                    }
+            ) {
+                Column(
+                    modifier = Modifier.align(Alignment.CenterStart)
+                ) {
                     ExpenseTextView(
                         text = "Good Afternoon",
                         fontSize = 14.sp,
-                        fontWeight = FontWeight.Medium,
+                        fontWeight = FontWeight.Bold,
                         color = Color.White
                     )
                     ExpenseTextView(
@@ -82,18 +91,11 @@ fun HomeScreen(navController: NavController) {
                     )
                 }
                 Image(
-                    painter = painterResource(id = R.drawable.ic_notification),
+                    painter = painterResource(R.drawable.ic_notification),
                     contentDescription = null,
-                    modifier = Modifier.align(
-                        Alignment.CenterEnd
-                    )
+                    modifier = Modifier.align(Alignment.CenterEnd)
                 )
             }
-
-            val state = viewModel.expenses.collectAsState(initial = emptyList())
-            val expenses = viewModel.getTotalExpense(state.value)
-            val income = viewModel.getTotalIncome(state.value)
-            val balance = viewModel.getBalance(state.value)
 
             CardItem(modifier = Modifier.constrainAs(card) {
                 top.linkTo(nameRow.bottom)
@@ -114,8 +116,7 @@ fun HomeScreen(navController: NavController) {
             )
 
             Image(
-                painter = painterResource(id = R.drawable.ic_add),
-                contentDescription = null,
+                painter = painterResource(R.drawable.ic_add), contentDescription = null,
                 modifier = Modifier
                     .constrainAs(add) {
                         bottom.linkTo(parent.bottom)
@@ -128,6 +129,8 @@ fun HomeScreen(navController: NavController) {
                         navController.navigate("/add")
                     }
             )
+
+
         }
     }
 }
@@ -270,7 +273,7 @@ fun TransactionItem(title: String, amount: String, icon: Int, date: String, colo
         Row(verticalAlignment = Alignment.CenterVertically) {
             Image(
                 painter = painterResource(id = icon), contentDescription = null,
-                modifier = Modifier.size(50.dp)
+                modifier = Modifier.size(60.dp)
             )
             Spacer(modifier = Modifier.size(8.dp))
             Column {
@@ -280,7 +283,7 @@ fun TransactionItem(title: String, amount: String, icon: Int, date: String, colo
         }
         ExpenseTextView(
             text = "$ ${Utils.formatToDecimalValue(amount.toDouble())}",
-            fontSize = 18.sp,
+            fontSize = 15.sp,
             modifier = Modifier.align(Alignment.CenterEnd),
             color = color,
             fontWeight = FontWeight.SemiBold
